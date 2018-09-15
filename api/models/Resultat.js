@@ -26,8 +26,8 @@ module.exports = {
 
       compartiment: {
         type: 'number',
-        minimum: 1,
-        maximum: 5,
+        min: 1,
+        max: 5,
       },
 
       nbFois: {
