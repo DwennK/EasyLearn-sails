@@ -15,7 +15,7 @@ module.exports = {
       libelle: {
         type: 'string',
         required: true,
-        maxlenght : 50,
+        maxLength : 50,
       },
   
 

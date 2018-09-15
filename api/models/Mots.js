@@ -13,14 +13,13 @@ module.exports = {
       //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
   
       numLangue: {
-        type: 'int',
-        required: true,
+        model : 'langues',
       },
 
       libelle: {
         type: 'string',
         required: true,
-        maxlenght : 50,
+        maxLength : 50,
       },
   
 

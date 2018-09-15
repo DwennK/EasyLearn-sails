@@ -13,27 +13,25 @@ module.exports = {
       //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
   
       numUtilisateur: {
-        type: 'int',
-        required: true,
+        model : 'utilisateurs',
       },
 
       numCategorie: {
-        type: 'int',
-        required: true,
+        model : 'categories',
       },
 
       numCarte: {
-        type: 'int',
-        required: true,
+        model : 'cartes',
       },
 
       compartiment: {
-        type: 'int',
-        required: true,
+        type: 'number',
+        minimum: 1,
+        maximum: 5,
       },
 
       nbFois: {
-        type: 'int',
+        type: 'number',
         required: true,
       },
 
