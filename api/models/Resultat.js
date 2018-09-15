@@ -5,23 +5,40 @@
  */
 
 module.exports = {
-    tableName:  'mots',
+    tableName:  'resultats',
     attributes: {
   
       //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
       //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
       //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
   
-      numLangue: {
+      numUtilisateur: {
         type: 'int',
         required: true,
       },
 
-      libelle: {
-        type: 'string',
+      numCategorie: {
+        type: 'int',
         required: true,
-        maxlenght : 50,
       },
+
+      numCarte: {
+        type: 'int',
+        required: true,
+      },
+
+      compartiment: {
+        type: 'int',
+        required: true,
+      },
+
+      nbFois: {
+        type: 'int',
+        required: true,
+      },
+
+
+
   
 
   
