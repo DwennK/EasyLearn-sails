@@ -15,13 +15,11 @@ module.exports = {
       numRecto: {
         type: 'int',
         required: true,
-        maxLength: 11,
       },
 
       numVerso: {
         type: 'int',
         required: true,
-        maxLength: 11,
       },
   
 
