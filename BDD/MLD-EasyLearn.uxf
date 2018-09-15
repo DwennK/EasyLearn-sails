@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>369</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Resultats
+--
+&lt;&lt; PK &gt;&gt; Numero
+&lt;&lt; FK1 &gt;&gt; NumUsers
+&lt;&lt; FK2 &gt;&gt; NumCategories
+&lt;&lt; FK3 &gt;&gt; NumCards
+Compartiment
+NbFois</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>189</x>
+      <y>369</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Categories
+--
+&lt;&lt; PK &gt;&gt; Numero
+Libelle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1098</x>
+      <y>648</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Langues
+--
+&lt;&lt; PK &gt;&gt; Numero
+Libelle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>774</x>
+      <y>648</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Mots
+--
+&lt;&lt; PK &gt;&gt; Numero
+&lt;&lt; FK &gt;&gt; NumLangues
+Libelle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>648</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Cartes
+--
+&lt;&lt; PK &gt;&gt; Numero
+&lt;&lt; FK1 &gt;&gt; NumRecto
+&lt;&lt; FK2 &gt;&gt; NumVerso
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>108</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Utilisateurs
+--
+&lt;&lt; PK &gt;&gt;  Numero
+Nom
+Prenom
+Email
+MotDePasse</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>693</x>
+      <y>360</y>
+      <w>288</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>MLD
+Dwenn Kaudmann
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>954</x>
+      <y>711</y>
+      <w>162</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>711</y>
+      <w>162</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>513</y>
+      <w>27</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>252</y>
+      <w>27</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>423</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

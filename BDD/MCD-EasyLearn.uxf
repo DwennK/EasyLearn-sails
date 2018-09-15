@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>414</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Resultat
+--
+Compartiment
+NbFois</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>171</x>
+      <y>414</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Categorie
+--
+&lt;&lt;ID&gt;&gt; Numero
+Libelle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>693</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Langue
+--
+&lt;&lt;ID&gt;&gt; Numero
+Libelle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>693</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Mot
+--
+&lt;&lt;ID&gt;&gt; Numero
+Libelle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>693</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Carte
+--
+&lt;&lt;ID&gt;&gt; Numero
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>738</y>
+      <w>162</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..1
+recto</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>783</y>
+      <w>162</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..1
+verso</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>423</x>
+      <y>153</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Utilisateur
+--
+&lt;&lt;ID&gt;&gt; Numero
+Nom
+Prenom
+Email
+MotDePasse</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>936</x>
+      <y>756</y>
+      <w>162</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+appartient</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>297</y>
+      <w>45</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>486</y>
+      <w>45</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1..1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>486</y>
+      <w>252</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>260.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>486</y>
+      <w>198</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1..1
+layer=2</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>810</x>
+      <y>108</y>
+      <w>288</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>MCD
+Maxence Bender
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
