@@ -49,7 +49,8 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
      adapter: 'sails-mongo',
-     url: 'mysql://user:password@host:port/database',
+     url: 'mongodb+srv://Dwenn:Idclip00?=@cluster0-a86dt.mongodb.net/EasyLearn?retryWrites=true',
+     //url: 'mysql://user:password@host:port/database',
 
   },
 
