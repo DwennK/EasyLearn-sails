@@ -5,21 +5,22 @@
  */
 
 module.exports = {
-    tableName:  'cartes',
+    tableName:  'mots',
     attributes: {
   
       //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
       //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
       //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
   
-      numRecto: {
+      numLangue: {
         type: 'int',
         required: true,
       },
 
-      numVerso: {
-        type: 'int',
+      libelle: {
+        type: 'string',
         required: true,
+        maxlenght : 50,
       },
   
 
