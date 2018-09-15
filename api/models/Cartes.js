@@ -13,13 +13,11 @@ module.exports = {
       //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
   
       numRecto: {
-        type: 'int',
-        required: true,
+        model : 'mots',
       },
 
       numVerso: {
-        type: 'int',
-        required: true,
+        model : 'mots',
       },
   
 
