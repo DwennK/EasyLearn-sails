@@ -57,8 +57,12 @@ parasails.registerPage('signup', {
       var argins = this.formData;
 
       // Validate full name:
-      if(!argins.fullName) {
-        this.formErrors.fullName = true;
+      if(!argins.firstName) {
+        this.formErrors.firstName = true;
+      }
+
+      if(!argins.lastName) {
+        this.formErrors.lastName = true;
       }
 
       // Validate email:
