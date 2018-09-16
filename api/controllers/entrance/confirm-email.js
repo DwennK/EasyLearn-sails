@@ -54,10 +54,10 @@ then redirect to either a special landing page (for newly-signed up users), or t
     }
 
     // Get the user with the matching email token.
-    var user = await User.findOne({ emailProofToken: inputs.token });
+    var user = await Utilisateurs.findOne({ emailProofToken: inputs.token });
 
     // If no such user exists, or their token is expired, bail.
-    if (!user || user.emailProofTokenExpiresAt <= Date.now()) {
+    if (!user || Utilisateurs.emailProofTokenExpiresAt <= Date.now()) {
       throw 'invalidOrExpiredToken';
     }
 
