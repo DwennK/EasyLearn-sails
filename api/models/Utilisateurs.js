@@ -33,6 +33,7 @@ module.exports = {
 
     motDePasse: {
       type: 'string',
+      maxLength: 200,
       required: true,
     },
 

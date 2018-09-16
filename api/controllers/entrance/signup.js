@@ -68,17 +68,23 @@ the account verification message.)`,
 
     // Build up data for the new user record and save it to the database.
     // (Also use `fetch` to retrieve the new ID so that we can use it below.)
-    var newUserRecord = await User.create(Object.assign({
-      emailAddress: newEmailAddress,
-      password: await sails.helpers.passwords.hashPassword(inputs.password),
-      fullName: inputs.fullName,
-      tosAcceptedByIp: this.req.ip
+    var newUserRecord = await Utilisateurs.create(Object.assign({
+      email: newEmailAddress,
+      motDePasse: await sails.helpers.passwords.hashPassword(inputs.password),
+      nom: inputs.fullName,
+      prenom: inputs.fullName
     }, sails.config.custom.verifyEmailAddresses? {
       emailProofToken: await sails.helpers.strings.random('url-friendly'),
       emailProofTokenExpiresAt: Date.now() + sails.config.custom.emailProofTokenTTL,
       emailStatus: 'unconfirmed'
     }:{}))
     .intercept('E_UNIQUE', 'emailAlreadyInUse')
+    .intercept((err)=>{
+      // Return a modified error here (or a special exit signal)
+      // and .create() will throw that instead
+      err.message = 'Uh oh: '+err.message;
+      return err;
+     })
     .intercept({name: 'UsageError'}, 'invalid')
     .fetch();
 
@@ -88,7 +94,7 @@ the account verification message.)`,
       let stripeCustomerId = await sails.helpers.stripe.saveBillingInfo.with({
         emailAddress: newEmailAddress
       });
-      await User.update(newUserRecord.id).set({
+      await Utilisateurs.update(newUserRecord.id).set({
         stripeCustomerId
       });
     }
