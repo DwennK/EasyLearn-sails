@@ -28,12 +28,12 @@ module.exports = {
       type: 'string',
       required: true,
       maxLength: 50,
+      isEmail: true,
     },
 
     motDePasse: {
       type: 'string',
       required: true,
-      protect: true,
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

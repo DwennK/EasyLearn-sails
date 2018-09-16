@@ -74,8 +74,8 @@ and exposed as \`req.me\`.)`
     // Look up by the email address.
     // (note that we lowercase it to ensure the lookup is always case-insensitive,
     // regardless of which database we're using)
-    var userRecord = await User.findOne({
-      emailAddress: inputs.emailAddress.toLowerCase(),
+    var userRecord = await Utilisateurs.findOne({
+      email: inputs.emailAddress.toLowerCase(),
     });
 
     // If there was no matching user, respond thru the "badCombo" exit.
@@ -84,7 +84,7 @@ and exposed as \`req.me\`.)`
     }
 
     // If the password doesn't match, then also exit thru "badCombo".
-    await sails.helpers.passwords.checkPassword(inputs.password, userRecord.password)
+    await sails.helpers.passwords.checkPassword(inputs.password, userRecord.motDePasse)
     .intercept('incorrect', 'badCombo');
 
     // If "Remember Me" was enabled, then keep the session alive for
