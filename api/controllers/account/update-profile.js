@@ -9,11 +9,15 @@ module.exports = {
 
   inputs: {
 
-    fullName: {
+    firstName: {
       type: 'string'
     },
 
-    emailAddress: {
+    lastName: {
+      type: 'string'
+    },
+
+    email: {
       type: 'string'
     },
 
@@ -32,7 +36,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    var newEmailAddress = inputs.emailAddress;
+    var newEmailAddress = inputs.email;
     if (newEmailAddress !== undefined) {
       newEmailAddress = newEmailAddress.toLowerCase();
     }
@@ -60,7 +64,7 @@ module.exports = {
 
     // If the email address is changing, make sure it is not already being used.
     if (_.contains(['beginChange', 'changeImmediately', 'modifyPendingChange'], desiredEffectReEmail)) {
-      let conflictingUser = await User.findOne({
+      let conflictingUser = await Utilisateurs.findOne({
         or: [
           { emailAddress: newEmailAddress },
           { emailChangeCandidate: newEmailAddress }
@@ -75,7 +79,8 @@ module.exports = {
     // Start building the values to set in the db.
     // (We always set the fullName if provided.)
     var valuesToSet = {
-      fullName: inputs.fullName,
+      firstName: inputs.firstName,
+      lastName: inputs.lastName,
     };
 
     switch (desiredEffectReEmail) {
@@ -116,7 +121,7 @@ module.exports = {
     }
 
     // Save to the db
-    await User.update({id: this.req.me.id }).set(valuesToSet);
+    await Utilisateurs.update({id: this.req.me.id }).set(valuesToSet);
 
     // If this is an immediate change, and billing features are enabled,
     // then also update the billing email for this user's linked customer entry
@@ -132,7 +137,7 @@ module.exports = {
         emailAddress: newEmailAddress
       });
       if (didNotAlreadyHaveCustomerId){
-        await User.update({ id: this.req.me.id }).set({
+        await Utilisateurs.update({ id: this.req.me.id }).set({
           stripeCustomerId
         });
       }
