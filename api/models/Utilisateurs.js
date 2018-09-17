@@ -35,7 +35,13 @@ module.exports = {
       type: 'string',
       maxLength: 200,
       required: true,
+      protected: true,
     },
+
+    customToJSON: function() {
+      // Return a shallow copy of this record with the password and ssn removed.
+      return _.omit(this, ['motDePasse'])
+    }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
