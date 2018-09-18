@@ -1,5 +1,5 @@
 /**
- * Utilisateurs.js
+ * Langues.js
  *
  * A user who can log in to this application.
  */

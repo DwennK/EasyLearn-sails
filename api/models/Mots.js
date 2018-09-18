@@ -1,7 +1,7 @@
 /**
- * Utilisateurs.js
+ * Mots.js
  *
- * A user who can log in to this application.
+ * Un mot contenant le numéro de la langue, et le libellé
  */
 
 module.exports = {
