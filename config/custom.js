@@ -65,7 +65,7 @@ module.exports.custom = {
   fromName: 'The EasyLearn Team',
 
   // Email address for receiving support messages & other correspondences.
-  internalEmailAddress: 'support+development@example.com',
+  internalEmailAddress: 'Dwenn.Kaufmann@rpn.ch',
 
   // Whether to require proof of email address ownership any time a new user
   // signs up, or when an existing user attempts to change their email address.
