@@ -34,7 +34,18 @@ module.exports = {
       //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
       //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
       // n/a
+
+      cartes: {
+        collection: 'cartes' ,
+        via : 'numrecto'
+      },
+      
+      cartes: {
+        collection: 'cartes' ,
+        via : 'numverso'
+      },
   
+
     },
   
   
