@@ -12,12 +12,14 @@ module.exports = {
       //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
       //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
   
-      numRecto: {
+      numrecto: {
         model : 'mots',
+        required: true,
       },
 
-      numVerso: {
+      numverso: {
         model : 'mots',
+        required: true,
       },
   
 
