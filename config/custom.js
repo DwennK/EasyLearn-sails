@@ -53,17 +53,19 @@ module.exports.custom = {
   **************************************************************************/
   // mailgunDomain: 'sandboxaa1234fake678.mailgun.org',
   // mailgunSecret: 'key-fakeb183848139913858e8abd9a3',
+   mailgunDomain: 'sandboxffe79e5d7b084b7584224f35128590a0.mailgun.org',
+   mailgunSecret: 'key-1b3684bd23eccff2b72c55193cb1f8af',
   //--------------------------------------------------------------------------
   // /\  Configure these to enable support for automated emails.
   // ||  (Important for password recovery, verification, contact form, etc.)
   //--------------------------------------------------------------------------
 
   // The sender that all outgoing emails will appear to come from.
-  fromEmailAddress: 'noreply@example.com',
+  fromEmailAddress: 'Dwenn@live.fr',
   fromName: 'The EasyLearn Team',
 
   // Email address for receiving support messages & other correspondences.
-  internalEmailAddress: 'support+development@example.com',
+  internalEmailAddress: 'Dwenn.Kaufmann@rpn.ch',
 
   // Whether to require proof of email address ownership any time a new user
   // signs up, or when an existing user attempts to change their email address.
