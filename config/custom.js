@@ -61,7 +61,7 @@ module.exports.custom = {
   //--------------------------------------------------------------------------
 
   // The sender that all outgoing emails will appear to come from.
-  fromEmailAddress: 'noreply@example.com',
+  fromEmailAddress: 'Dwenn@live.fr',
   fromName: 'The EasyLearn Team',
 
   // Email address for receiving support messages & other correspondences.
