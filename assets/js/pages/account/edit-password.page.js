@@ -45,15 +45,15 @@ parasails.registerPage('edit-password', {
       // Clear out any pre-existing error messages.
       this.formErrors = {};
 
-      var argins = { password: this.formData.password };
+      var argins = { motDePasse: this.formData.password };
 
       // Validate password:
-      if(!argins.password) {
+      if(!argins.motDePasse) {
         this.formErrors.password = true;
       }
 
       // Validate password confirmation:
-      if(argins.password && argins.password !== this.formData.confirmPassword) {
+      if(argins.motDePasse && argins.motDePasse !== this.formData.confirmPassword) {
         this.formErrors.confirmPassword = true;
       }
 

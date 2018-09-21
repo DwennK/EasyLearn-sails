@@ -9,7 +9,7 @@ module.exports = {
 
   inputs: {
 
-    password: {
+    motDePasse: {
       description: 'The new, unencrypted password.',
       example: 'abc123v2',
       required: true
@@ -21,12 +21,12 @@ module.exports = {
   fn: async function (inputs, exits) {
 
     // Hash the new password.
-    var hashed = await sails.helpers.passwords.hashPassword(inputs.password);
+    var hashed = await sails.helpers.passwords.hashPassword(inputs.motDePasse);
 
     // Update the record for the logged-in user.
     await Utilisateurs.update({ id: this.req.me.id })
     .set({
-      password: hashed
+      motDePasse: hashed
     });
 
     return exits.success();

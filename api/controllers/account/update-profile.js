@@ -9,11 +9,11 @@ module.exports = {
 
   inputs: {
 
-    firstName: {
+    nom: {
       type: 'string'
     },
 
-    lastName: {
+    prenom: {
       type: 'string'
     },
 
