@@ -52,10 +52,58 @@
           <div class="step-image">
           <img alt="computer with email symbol on screen" src="/images/setup-email.png"/>
           </div>
-          <h5>Set up your branding and content</h5>
-          <p>This starter app includes several different page templates (including the one you're reading right now) that you can change as much or as little as you like.  If there are any pages you won't need, just remove them.</p>
-          <p>To get started, do a global find/replace in this project for occurrences of <code>EasyLearn</code> and replace them all with the actual name of your app or platform ("Sharepoint").  Then do the same thing again to replace <code>Peaks</code> with the actual name of your organization ("Microsoft Corporation").</p>
-          <p><small>This app also includes a default <a href="/legal/terms">Terms of Use</a> and <a href="/legal/privacy">Privacy Policy</a>.  We want to make it easier for apps to be transparent about their users' rights and privacy.  But we are developers, not lawyers; and this is <em>definitely not legal advice</em>.  Before going live, be sure to replace these example documents with your own company's policies, and <a href="https://en.wikipedia.org/wiki/Counsel" target="_blank">seek counsel</a> for assistance if you need to design new terms from scratch.</small></p>
+          <h5>Short example of CRUD routes</h5>
+          <div class="table-wrapper"><table>
+              <thead>
+              <tr>
+              <th>Route</th>
+              <th>Blueprint Action</th>
+              <th>Example URL</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+              <td>GET /:model/find</td>
+              <td><a href="/documentation/reference/blueprint-api/find-where">find</a></td>
+              <td><code>http://localhost:1337/user/find?name=bob</code></td>
+              </tr>
+              <tr>
+              <td>GET /:model/find/:id</td>
+              <td><a href="/documentation/reference/blueprint-api/find-one">findOne</a></td>
+              <td><code>http://localhost:1337/user/find/123</code></td>
+              </tr>
+              <tr>
+              <td>GET /:model/create</td>
+              <td><a href="/documentation/reference/blueprint-api/create">create</a></td>
+              <td><code>http://localhost:1337/user/create?name=bob&amp;age=18</code></td>
+              </tr>
+              <tr>
+              <td>GET /:model/update/:id</td>
+              <td><a href="/documentation/reference/blueprint-api/update">update</a></td>
+              <td><code>http://localhost:1337/user/update/123?name=joe</code></td>
+              </tr>
+              <tr>
+              <td>GET /:model/destroy/:id</td>
+              <td><a href="/documentation/reference/blueprint-api/destroy">destroy</a></td>
+              <td><code>http://localhost:1337/user/destroy/123</code></td>
+              </tr>
+              <tr>
+              <td>GET /:model/:id/:association/add/:fk</td>
+              <td><a href="/documentation/reference/blueprint-api/add-to">add</a></td>
+              <td><code>http://localhost:1337/user/123/pets/add/3</code></td>
+              </tr>
+              <tr>
+              <td>GET /:model/:id/:association/remove/:fk</td>
+              <td><a href="/documentation/reference/blueprint-api/remove-from">remove</a></td>
+              <td><code>http://localhost:1337/user/123/pets/remove/3</code></td>
+              </tr>
+              <tr>
+              <td>GET /:model/:id/:association/replace?association=[1,2...]</td>
+              <td><a href="/documentation/reference/blueprint-api/replace">replace</a></td>
+              <td><code>http://localhost:1337/user/123/pets/replace?pets=[3,4]</code></td>
+              </tr>
+              </tbody>
+              </table></div>
         </div>
         <div class="step">
           <div class="step-image">
