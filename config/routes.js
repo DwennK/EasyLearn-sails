@@ -34,6 +34,7 @@ module.exports.routes = {
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
 
+  //Game page, long and short URL leading ot the same action
   'GET /game/play':          { action: 'game/view-play' },
   'GET /play':          { action: 'game/view-play' },
 
