@@ -30,9 +30,9 @@ module.exports = {
     // Respond with view.
     return exits.success(
       {
-            //On y retourne le tableau de choses
-            things: things,
-            userxs: userxs
+            //On y retourne les tableaux
+            things,
+            userxs
       }
     );
 
