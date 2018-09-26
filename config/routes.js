@@ -38,6 +38,9 @@ module.exports.routes = {
   'GET /game/play':          { action: 'game/view-play' },
   'GET /play':          { action: 'game/view-play' },
 
+  //Documentation page for the API and the website
+  'GET /documentation': { action: 'view-documentation' },
+
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
