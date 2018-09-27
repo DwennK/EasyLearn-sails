@@ -28,6 +28,7 @@ module.exports = {
         type: 'number',
         min: 1,
         max: 5,
+        defaultsTo: 3,
       },
 
       nbFois: {
