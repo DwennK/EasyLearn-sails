@@ -21,6 +21,10 @@ module.exports = {
         model : 'mots',
         required: true,
       },
+
+      numUtilisateurs: {
+          model: 'utilisateurs',
+      },
   
 
   

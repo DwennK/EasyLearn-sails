@@ -46,6 +46,11 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
     // n/a
+    cartes: {
+      collection: 'cartes',
+      via: 'numUtilisateurs'
+    }
+
 
   },
 
