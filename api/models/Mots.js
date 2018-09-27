@@ -10,11 +10,7 @@ module.exports = {
   
       //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
       //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
-      //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-  
-      numLangue: {
-        model : 'langues',
-      },
+      //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═
 
       libelle: {
         type: 'string',
@@ -34,17 +30,21 @@ module.exports = {
       //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
       //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
       // n/a
+  
+      numLangues: {
+        model : 'langues',
+        required: true,
+      },
 
-      cartes: {
-        collection: 'cartes' ,
-        via : 'numrecto'
+      numUtilisateurs: {
+        model: 'utilisateurs',
+        required: true,
+      },
+
+      numCarte: {
+        model: 'cartes' ,
       },
       
-      cartes: {
-        collection: 'cartes' ,
-        via : 'numverso'
-      },
-  
 
     },
   
