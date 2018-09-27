@@ -42,9 +42,14 @@ module.exports = {
       },
 
       numCarte: {
-        model: 'cartes' ,
+        collection: 'cartes' ,
+        via: 'numMotsRecto',
       },
       
+      numCarte: {
+        collection: 'cartes' ,
+        via: 'numMotsVerso',
+      },
 
     },
   

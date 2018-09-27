@@ -58,10 +58,59 @@ module.exports.bootstrap = async function(done) {
     await sails.models[identity].destroy({});
   }//∞
 
+
+  //CREATION DE DONNEES DE TEST A LA MAIN
+  //CREATION DE DONNEES DE TEST A LA MAIN
+  //CREATION DE DONNEES DE TEST A LA MAIN
+  //CREATION DE DONNEES DE TEST A LA MAIN
+  //CREATION DE DONNEES DE TEST A LA MAIN
   // By convention, this is a good place to set up fake data during development.
-  //await Utilisateurs.createEach([
-  //  { emailAddress: 'admin@example.com', fullName: 'Ryan Dahl', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('abc123') },
-  //]);
+          await Utilisateurs.createEach([
+            { email: 'Dwennn@live.fr',  nom: 'Dwenn',   prenom: 'Kaufmann',   motDePasse: await sails.helpers.passwords.hashPassword('Dwenn') },
+            { email: 'Mehmet@live.fr',  nom: 'Mehmet',  prenom: 'Ongan',      motDePasse: await sails.helpers.passwords.hashPassword('Mehmet') },
+            { email: 'Maxence@live.fr', nom: 'Maxence', prenom: 'Bender',     motDePasse: await sails.helpers.passwords.hashPassword('Maxence') },
+            { email: 'Dilane@live.fr',  nom: 'Dilane',  prenom: 'Rodriguez',  motDePasse: await sails.helpers.passwords.hashPassword('Dilane') },
+            { email: 'asd@live.fr',     nom: 'asd',     prenom: 'asd',        motDePasse: await sails.helpers.passwords.hashPassword('asd') },
+          ]);
+
+          await Langues.createEach([
+            { libelle: 'French' },
+            { libelle: 'English' },
+            { libelle: 'German' },
+            { libelle: 'Italian' },
+            { libelle: 'Spanish' },
+          ]);
+
+          await Categories.createEach([
+            { libelle: 'Food' },
+            { libelle: 'School' },
+            { libelle: 'Computer' },
+            { libelle: 'Pokémon' },
+          ]);
+
+          await Mots.createEach([
+            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 1},
+            { libelle: 'Pen',       numLangues : 2, numUtilisateurs : 1, numCarte : 1},
+            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 2},
+            { libelle: 'Bleistift', numLangues : 3, numUtilisateurs : 1, numCarte : 2},
+            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 3},
+            { libelle: 'Matita',    numLangues : 4, numUtilisateurs : 1, numCarte : 3},
+            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 4},
+            { libelle: 'Lápiz',     numLangues : 5, numUtilisateurs : 1, numCarte : 4},
+          ]);
+
+          await Cartes.createEach([
+            { numMotsRecto: 1,  numMotsVerso: 2,  numUtilisateurs : 1},
+            { numMotsRecto: 2,  numMotsVerso: 3,  numUtilisateurs : 1},
+            { numMotsRecto: 4,  numMotsVerso: 5,  numUtilisateurs : 1},
+            { numMotsRecto: 1,  numMotsVerso: 2,  numUtilisateurs : 2},
+            { numMotsRecto: 1,  numMotsVerso: 2,  numUtilisateurs : 3},
+          ]);
+    //FIN DE CREATION DE DONNEES DE TEST A LA MAIN
+    //FIN DE CREATION DE DONNEES DE TEST A LA MAIN
+    //FIN DE CREATION DE DONNEES DE TEST A LA MAIN
+    //FIN DE CREATION DE DONNEES DE TEST A LA MAIN
+    //FIN DE CREATION DE DONNEES DE TEST A LA MAIN
 
   // Save new bootstrap version
   await sails.helpers.fs.writeJson.with({
