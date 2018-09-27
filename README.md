@@ -3,6 +3,12 @@
 a [Sails v1](https://sailsjs.com) application
 
 
+
+# Launch the App
+
++ [This will launch the ORM, Bootstrap and all dependencies]sails lift
+
+
 ### Links
 
 + [Get started](https://sailsjs.com/get-started)
