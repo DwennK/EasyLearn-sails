@@ -1,4 +1,4 @@
-# test-project
+# EasyLearn-sails
 
 a [Sails v1](https://sailsjs.com) application
 
@@ -6,7 +6,8 @@ a [Sails v1](https://sailsjs.com) application
 
 # Launch the App
 
-+ [This will launch the ORM, Bootstrap and all dependencies]sails lift
++ sails lift
+This will launch the ORM, load the Bootstrap, hooks, routes (blueprints) and bind the app with the :1337 port
 
 
 ### Links
