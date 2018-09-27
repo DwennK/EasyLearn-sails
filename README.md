@@ -7,6 +7,8 @@ a [Sails v1](https://sailsjs.com) application
 # Launch the App
 
 + sails lift
+
+
 This will launch the ORM, load the Bootstrap, hooks, routes (blueprints) and bind the app with the :1337 port
 
 
