@@ -22,7 +22,7 @@ module.exports.custom = {
   * > but it can also be used for user-uploaded images, webhooks, etc.      *
   *                                                                         *
   **************************************************************************/
-  baseUrl: 'http://localhost:1337',
+  baseUrl: 'https://easylearn-sails.herokuapp.com/',
 
   /**************************************************************************
   *                                                                         *
@@ -65,7 +65,7 @@ module.exports.custom = {
   fromName: 'The EasyLearn Team',
 
   // Email address for receiving support messages & other correspondences.
-  internalEmailAddress: 'Dwenn.Kaufmann@rpn.ch',
+  internalEmailAddress: 'Dwenn@live.fr',
 
   // Whether to require proof of email address ownership any time a new user
   // signs up, or when an existing user attempts to change their email address.

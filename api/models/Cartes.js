@@ -26,8 +26,18 @@ module.exports = {
           model: 'utilisateurs',
           required: true,
       },
-  
 
+      compartiment: {
+        type: 'number',
+        min: 1,
+        max: 5,
+        defaultsTo: 3,
+      },
+
+      nbFois: {
+        type: 'number',
+        defaultsTo: 0,
+      },
   
       //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
       //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
