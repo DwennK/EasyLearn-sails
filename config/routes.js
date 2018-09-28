@@ -60,6 +60,7 @@ module.exports.routes = {
 
   'GET /langues/find' :     'LanguesController.find',
   'GET /cartes/find' :      'CartesController.find',
+  'GET /cartes/create' :    'CartesController.create',
   'GET /mots/find' :        'MotsController.find',
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗

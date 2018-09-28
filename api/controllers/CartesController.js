@@ -15,10 +15,17 @@ module.exports = {
     },
 
     create: async function(req,res){
-        var createdUser = await Utilisateurs.create({nom: req.me.nom}, {prenom : req.me.prenom});
+        
+        var createdCard = await Cartes.create(
+            {
+                numMotsRecto: req.param('numMotsRecto'),
+                numMotsVerso : req.param('numMotsVerso'),
+                numUtilisateurs : req.me.id 
+            })
+            .fetch();
 
-        return res.json(createdUser);
-    }
+        return res.json(createdCard);
+    },
 
 };
 
