@@ -34,6 +34,13 @@ module.exports.routes = {
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
 
+  //Game page, long and short URL leading ot the same action
+  'GET /game/play':          { action: 'game/view-play' },
+  'GET /play':          { action: 'game/view-play' },
+
+  //Documentation page for the API and the website
+  'GET /documentation': { action: 'view-documentation' },
+
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
@@ -51,6 +58,10 @@ module.exports.routes = {
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
 
 
+  'GET /langues/find' :     'LanguesController.find',
+  'GET /cartes/find' :      'CartesController.find',
+  'GET /cartes/create' :    'CartesController.create',
+  'GET /mots/find' :        'MotsController.find',
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗

@@ -1,7 +1,7 @@
 /**
- * Utilisateurs.js
+ * Mots.js
  *
- * A user who can log in to this application.
+ * Un mot contenant le numéro de la langue, et le libellé
  */
 
 module.exports = {
@@ -10,11 +10,7 @@ module.exports = {
   
       //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
       //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
-      //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-  
-      numLangue: {
-        model : 'langues',
-      },
+      //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═
 
       libelle: {
         type: 'string',
@@ -35,6 +31,26 @@ module.exports = {
       //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
       // n/a
   
+      numLangues: {
+        model : 'langues',
+        required: true,
+      },
+
+      numUtilisateurs: {
+        model: 'utilisateurs',
+        required: true,
+      },
+
+      numCarte: {
+        collection: 'cartes' ,
+        via: 'numMotsRecto',
+      },
+      
+      numCarte: {
+        collection: 'cartes' ,
+        via: 'numMotsVerso',
+      },
+
     },
   
   

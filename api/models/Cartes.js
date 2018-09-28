@@ -12,12 +12,19 @@ module.exports = {
       //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
       //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
   
-      numRecto: {
+      numMotsRecto: {
         model : 'mots',
+        required: true,
       },
 
-      numVerso: {
+      numMotsVerso: {
         model : 'mots',
+        required: true,
+      },
+
+      numUtilisateurs: {
+          model: 'utilisateurs',
+          required: true,
       },
   
 

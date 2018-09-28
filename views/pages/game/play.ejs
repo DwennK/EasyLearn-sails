@@ -1,0 +1,20 @@
+<div id="play">
+    <div class="container">
+      <h1>Easylearn : Play</h1>
+      <hr/>
+      <p>Please chose the category you want to play </p>
+      <ul>
+        <li v-for="thing in things">{{thing.label}}</li>
+        <select>
+            <option v-for="userx in userxs" :value="userx.id">{{userx.nom}}</option>
+          </select>
+      </ul>
+      <div class="buttons">
+        <a class="btn btn-info">Click me </a>
+        <button class="btn btn-outline-info ml-2">Open a modal</button>
+      </div>
+    </div>
+  
+  </div>
+  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
+  
