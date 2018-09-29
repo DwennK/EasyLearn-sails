@@ -47,12 +47,12 @@ module.exports.routes = {
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
   // Note that, in this app, these API endpoints may be accessed using the `Cloud.*()` methods
   // from the CloudSDK library.
-  '/api/v1/account/logout':                           { action: 'account/logout', csrf: false},
+  '/api/v1/account/logout':                           { action: 'account/logout', csrf: false}, //CSRF false means you dont have to have a CSRF token to contact the page
   'PUT   /api/v1/account/update-password':            { action: 'account/update-password' },
   'PUT   /api/v1/account/update-profile':             { action: 'account/update-profile' },
   'PUT   /api/v1/account/update-billing-card':        { action: 'account/update-billing-card' },
-  'PUT   /api/v1/entrance/login':                        { action: 'entrance/login' , csrf: false},
-  'POST  /api/v1/entrance/signup':                       { action: 'entrance/signup' , csrf: false},
+  'PUT   /api/v1/entrance/login':                        { action: 'entrance/login' , csrf: false}, //CSRF false means you dont have to have a CSRF token to contact the page
+  'POST  /api/v1/entrance/signup':                       { action: 'entrance/signup' , csrf: false}, //CSRF false means you dont have to have a CSRF token to contact the page
   'POST  /api/v1/entrance/send-password-recovery-email': { action: 'entrance/send-password-recovery-email' },
   'POST  /api/v1/entrance/update-password-and-login':    { action: 'entrance/update-password-and-login' },
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
