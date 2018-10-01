@@ -2,15 +2,29 @@
 
 a [Sails v1](https://sailsjs.com) application
 
+# Installation
+With [node installed](http://nodejs.org/en/download)
 
+Get the latest stable release of Sails
+```javascript
+
+npm install sails -g
+```
 
 # Launch the App
 
-+ sails lift
 
+```
+# cd into the project's folder
+cd my-app
+
+# fire up the server
+sails lift
+```
 
 This will launch the ORM, load the Bootstrap, hooks, routes (blueprints) and bind the app with the :1337 port
 
+You can now access it in your browser on : [http://localhost:1337/](http://localhost:1337/)
 
 ### Links
 
