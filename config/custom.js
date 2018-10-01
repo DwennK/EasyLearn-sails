@@ -22,7 +22,7 @@ module.exports.custom = {
   * > but it can also be used for user-uploaded images, webhooks, etc.      *
   *                                                                         *
   **************************************************************************/
-  baseUrl: 'https://easylearn-sails.herokuapp.com/',
+  baseUrl: 'https://localhost:1337/',
 
   /**************************************************************************
   *                                                                         *
