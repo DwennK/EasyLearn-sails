@@ -27,7 +27,10 @@ module.exports = {
         for(var i=5 ; myCartes.length  < nombreDeCartesVoulues && i >= 1 ; i--)
         {
             //On récupère toutes les cartes appartenant à l'utilisateur
-            temp = await Cartes.find({numUtilisateurs : req.me.id, compartiment : i});
+            temp = await Cartes
+            .find({numUtilisateurs : req.me.id, compartiment : i})
+            .populate('numMotsRecto')
+            .populate('numMotsVerso');
 
 
             //Utilise lodash (_) pour les trier aléatoirement. Le deuxième paramètre est le nombre qu'on veut en prendre aléatoirement.
