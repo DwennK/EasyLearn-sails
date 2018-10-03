@@ -7,7 +7,7 @@
 
 module.exports = {
 
-    //Cette fonction retourne la paquet de cartes que l'utilisateur doit révisier,
+    //Cette fonction retourne le paquet de cartes que l'utilisateur doit révisier,
     // en commençant par les piocher dans le Compatiment 5.
     // Il mélage ces cartes du compartiment 5 de manière aléàtoires.
     // S'il n'y en pas 20 (par défaut) ou LIMIT (paramètre de la requetes),
