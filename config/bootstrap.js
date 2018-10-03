@@ -67,7 +67,7 @@ module.exports.bootstrap = async function(done) {
   // By convention, this is a good place to set up fake data during development.
           await Utilisateurs.createEach([
             { email: 'Admin@live.fr',   nom: 'Admin',   prenom: 'Istrateur',  motDePasse: await sails.helpers.passwords.hashPassword('Admin') },
-            { email: 'Dwennn@live.fr',  nom: 'Dwenn',   prenom: 'Kaufmann',   motDePasse: await sails.helpers.passwords.hashPassword('Dwenn') },
+            { email: 'Dwenn@live.fr',  nom: 'Dwenn',   prenom: 'Kaufmann',   motDePasse: await sails.helpers.passwords.hashPassword('Dwenn') },
             { email: 'Mehmet@live.fr',  nom: 'Mehmet',  prenom: 'Ongan',      motDePasse: await sails.helpers.passwords.hashPassword('Mehmet') },
             { email: 'Maxence@live.fr', nom: 'Maxence', prenom: 'Bender',     motDePasse: await sails.helpers.passwords.hashPassword('Maxence') },
             { email: 'Dilane@live.fr',  nom: 'Dilane',  prenom: 'Rodriguez',  motDePasse: await sails.helpers.passwords.hashPassword('Dilane') },
@@ -121,7 +121,7 @@ module.exports.bootstrap = async function(done) {
 
           await Cartes.createEach([
             { numMotsRecto: 1,  numMotsVerso: 2,  numUtilisateurs : 1},
-            { numMotsRecto: 2,  numMotsVerso: 3,  numUtilisateurs : 1},
+            { numMotsRecto: 1,  numMotsVerso: 3,  numUtilisateurs : 1},
             { numMotsRecto: 4,  numMotsVerso: 5,  numUtilisateurs : 1},
             { numMotsRecto: 1,  numMotsVerso: 2,  numUtilisateurs : 2},
             { numMotsRecto: 1,  numMotsVerso: 2,  numUtilisateurs : 3},
