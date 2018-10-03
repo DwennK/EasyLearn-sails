@@ -66,19 +66,18 @@ module.exports.bootstrap = async function(done) {
   //CREATION DE DONNEES DE TEST A LA MAIN
   // By convention, this is a good place to set up fake data during development.
           await Utilisateurs.createEach([
+            { email: 'Admin@live.fr',   nom: 'Admin',   prenom: 'Istrateur',  motDePasse: await sails.helpers.passwords.hashPassword('Admin') },
             { email: 'Dwennn@live.fr',  nom: 'Dwenn',   prenom: 'Kaufmann',   motDePasse: await sails.helpers.passwords.hashPassword('Dwenn') },
             { email: 'Mehmet@live.fr',  nom: 'Mehmet',  prenom: 'Ongan',      motDePasse: await sails.helpers.passwords.hashPassword('Mehmet') },
             { email: 'Maxence@live.fr', nom: 'Maxence', prenom: 'Bender',     motDePasse: await sails.helpers.passwords.hashPassword('Maxence') },
             { email: 'Dilane@live.fr',  nom: 'Dilane',  prenom: 'Rodriguez',  motDePasse: await sails.helpers.passwords.hashPassword('Dilane') },
-            { email: 'asd@live.fr',     nom: 'asd',     prenom: 'asd',        motDePasse: await sails.helpers.passwords.hashPassword('asd') },
+            { email: 'Remy@live.fr',    nom: 'Remy',    prenom: 'Perreira',   motDePasse: await sails.helpers.passwords.hashPassword('Remy') },
           ]);
 
           await Langues.createEach([
             { libelle: 'French' },
             { libelle: 'English' },
-            { libelle: 'German' },
             { libelle: 'Italian' },
-            { libelle: 'Spanish' },
           ]);
 
           await Categories.createEach([
@@ -89,14 +88,35 @@ module.exports.bootstrap = async function(done) {
           ]);
 
           await Mots.createEach([
-            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 1},
-            { libelle: 'Pen',       numLangues : 2, numUtilisateurs : 1, numCarte : 1},
-            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 2},
-            { libelle: 'Bleistift', numLangues : 3, numUtilisateurs : 1, numCarte : 2},
-            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 3},
-            { libelle: 'Matita',    numLangues : 4, numUtilisateurs : 1, numCarte : 3},
-            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 4},
-            { libelle: 'Lápiz',     numLangues : 5, numUtilisateurs : 1, numCarte : 4},
+            //Crayon
+            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Pencil',    numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Matita',    numLangues : 3, numUtilisateurs : 1},
+            
+
+            //Stylo
+            { libelle: 'Stylo',    numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Pencil',   numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Penna',    numLangues : 4, numUtilisateurs : 1},
+            
+
+            //Régle
+            { libelle: 'Règle',    numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Ruler',    numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Regola',   numLangues : 4, numUtilisateurs : 1},
+            
+
+            //Crayon
+            { libelle: 'Taille-Crayon',    numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Sharpener',         numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Temperamatite',    numLangues : 4, numUtilisateurs : 1},
+            
+
+            //Crayon
+            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Pen',       numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Matita',    numLangues : 4, numUtilisateurs : 1},
+            
           ]);
 
           await Cartes.createEach([
