@@ -42,6 +42,13 @@ module.exports = {
       },
 
     },
+
+
+    customToJSON: function() {
+      // Return a shallow copy of this record with the password removed.
+      return _.omit(this, ['numUtilisateurs'])
+    },
+    
   
   
   };
