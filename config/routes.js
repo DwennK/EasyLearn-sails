@@ -57,10 +57,12 @@ module.exports.routes = {
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
 
 
-  'GET /langues/find' :     'LanguesController.find',
-  'GET /cartes/find' :      'CartesController.find',
-  'GET /cartes/create' :    'CartesController.create',
-  'GET /mots/find' :        'MotsController.find',
+  'GET /utilisateurs/find' :        'UtilisateursController.find',
+  'GET /utilisateurs/create' :      'UtilisateursController.create',
+  'GET /langues/find' :             'LanguesController.find',
+  'GET /cartes/find' :              'CartesController.find',
+  'GET /cartes/create' :            'CartesController.create',
+  'GET /mots/find' :  	            'MotsController.find',
 
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
