@@ -50,6 +50,8 @@ module.exports.datastores = {
     ***************************************************************************/
      adapter: 'sails-mysql',
      url: 'mysql://root:@localhost:3306/easylearn',
+     // STRING DE CONNEXION DE LA BDD REELLE EN DESSOUS<!>
+     //url: 'mysql://b543ed971e5e69:6081357c@eu-cdbr-west-02.cleardb.net/heroku_06a715057283883?reconnect=true',
 
   },
 
