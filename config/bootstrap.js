@@ -66,19 +66,17 @@ module.exports.bootstrap = async function(done) {
   //CREATION DE DONNEES DE TEST A LA MAIN
   // By convention, this is a good place to set up fake data during development.
           await Utilisateurs.createEach([
-            { email: 'Dwennn@live.fr',  nom: 'Dwenn',   prenom: 'Kaufmann',   motDePasse: await sails.helpers.passwords.hashPassword('Dwenn') },
+            { email: 'Dwenn@live.fr',   nom: 'Dwenn',   prenom: 'Kaufmann',    motDePasse: await sails.helpers.passwords.hashPassword('Dwenn') },
             { email: 'Mehmet@live.fr',  nom: 'Mehmet',  prenom: 'Ongan',      motDePasse: await sails.helpers.passwords.hashPassword('Mehmet') },
             { email: 'Maxence@live.fr', nom: 'Maxence', prenom: 'Bender',     motDePasse: await sails.helpers.passwords.hashPassword('Maxence') },
             { email: 'Dilane@live.fr',  nom: 'Dilane',  prenom: 'Rodriguez',  motDePasse: await sails.helpers.passwords.hashPassword('Dilane') },
-            { email: 'asd@live.fr',     nom: 'asd',     prenom: 'asd',        motDePasse: await sails.helpers.passwords.hashPassword('asd') },
+            { email: 'Remy@live.fr',    nom: 'Remy',    prenom: 'Perreira',   motDePasse: await sails.helpers.passwords.hashPassword('Remy') },
           ]);
 
           await Langues.createEach([
             { libelle: 'French' },
             { libelle: 'English' },
-            { libelle: 'German' },
             { libelle: 'Italian' },
-            { libelle: 'Spanish' },
           ]);
 
           await Categories.createEach([
@@ -89,22 +87,109 @@ module.exports.bootstrap = async function(done) {
           ]);
 
           await Mots.createEach([
-            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 1},
-            { libelle: 'Pen',       numLangues : 2, numUtilisateurs : 1, numCarte : 1},
-            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 2},
-            { libelle: 'Bleistift', numLangues : 3, numUtilisateurs : 1, numCarte : 2},
-            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 3},
-            { libelle: 'Matita',    numLangues : 4, numUtilisateurs : 1, numCarte : 3},
-            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1, numCarte : 4},
-            { libelle: 'Lápiz',     numLangues : 5, numUtilisateurs : 1, numCarte : 4},
+            //Crayon
+            { libelle: 'Crayon',    numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Pencil',    numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Matita',    numLangues : 3, numUtilisateurs : 1},
+            
+
+            //Stylo
+            { libelle: 'Stylo',    numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Pencil',   numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Penna',    numLangues : 4, numUtilisateurs : 1},
+            
+            //Régle
+            { libelle: 'Règle',    numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Ruler',    numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Regola',   numLangues : 4, numUtilisateurs : 1},
+            
+
+            //Sac à dos
+            { libelle: 'Sac à dos',  numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Backpack',   numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Zaino',      numLangues : 4, numUtilisateurs : 1},
+            
+
+            //Livre
+            { libelle: 'Book',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Rubber',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Libro',   numLangues : 3, numUtilisateurs : 1},
+
+            //Cahier
+            { libelle: 'Cahier',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Notebook',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Taccuino',   numLangues : 3, numUtilisateurs : 1},
+
+            //Professeur
+            { libelle: 'Professeur',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Professor',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Professore',   numLangues : 3, numUtilisateurs : 1},
+
+            //Classeur
+            { libelle: 'Classeur',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Binder',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Quaderno ad anelli',   numLangues : 3, numUtilisateurs : 1},
+
+            //Salle de classe
+            { libelle: 'Salle de classe',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Classroom',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Aula',   numLangues : 3, numUtilisateurs : 1},
+
+            //Étudiant
+            { libelle: 'Étudiant',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Student',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Studente',   numLangues : 3, numUtilisateurs : 1},
+
+            //École
+            { libelle: 'Ecole',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'School',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Scuola',   numLangues : 3, numUtilisateurs : 1},
+
+            //Compas
+            { libelle: 'Compas',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Compass',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Bussola',   numLangues : 3, numUtilisateurs : 1},
+
+            //Leçon
+            { libelle: 'Leçon',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Lesson',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Lezione',   numLangues : 3, numUtilisateurs : 1},
+
+            //Pupitre
+            { libelle: 'Pupitre',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Desk',  numLangues : 2, numUtilisateurs : 1},
+            { libelle: 'Scrivania',   numLangues : 3, numUtilisateurs : 1},
+
+
           ]);
 
           await Cartes.createEach([
+            //Cération des Cartes à la main pour l'utilisateur 1 (Dwenn@live.fr)
             { numMotsRecto: 1,  numMotsVerso: 2,  numUtilisateurs : 1},
-            { numMotsRecto: 2,  numMotsVerso: 3,  numUtilisateurs : 1},
+            { numMotsRecto: 1,  numMotsVerso: 3,  numUtilisateurs : 1},
+
             { numMotsRecto: 4,  numMotsVerso: 5,  numUtilisateurs : 1},
-            { numMotsRecto: 1,  numMotsVerso: 2,  numUtilisateurs : 2},
-            { numMotsRecto: 1,  numMotsVerso: 2,  numUtilisateurs : 3},
+            { numMotsRecto: 4,  numMotsVerso: 6,  numUtilisateurs : 1},
+
+            { numMotsRecto: 7,  numMotsVerso: 8,  numUtilisateurs : 1},
+            { numMotsRecto: 7,  numMotsVerso: 9,  numUtilisateurs : 1},
+
+            { numMotsRecto: 10,  numMotsVerso: 11,  numUtilisateurs : 1},
+            { numMotsRecto: 10,  numMotsVerso: 12,  numUtilisateurs : 1},
+
+            { numMotsRecto: 13,  numMotsVerso: 14,  numUtilisateurs : 1},
+            { numMotsRecto: 13,  numMotsVerso: 15,  numUtilisateurs : 1},
+
+            { numMotsRecto: 16,  numMotsVerso: 17,  numUtilisateurs : 1},
+            { numMotsRecto: 16,  numMotsVerso: 18,  numUtilisateurs : 1},
+
+            { numMotsRecto: 19,  numMotsVerso: 20,  numUtilisateurs : 1},
+            { numMotsRecto: 19,  numMotsVerso: 21,  numUtilisateurs : 1},
+
+            { numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1},
+            { numMotsRecto: 22,  numMotsVerso: 24,  numUtilisateurs : 1},
+
+            
           ]);
     //FIN DE CREATION DE DONNEES DE TEST A LA MAIN
     //FIN DE CREATION DE DONNEES DE TEST A LA MAIN

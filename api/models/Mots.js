@@ -41,16 +41,6 @@ module.exports = {
         required: true,
       },
 
-      numCarte: {
-        collection: 'cartes' ,
-        via: 'numMotsRecto',
-      },
-      
-      numCarte: {
-        collection: 'cartes' ,
-        via: 'numMotsVerso',
-      },
-
     },
   
   
