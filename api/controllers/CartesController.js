@@ -7,25 +7,41 @@
 
 module.exports = {
 
-    //Returns only the words that the user owns.
+    //Cette fonction retourne le paquet de cartes que l'utilisateur doit révisier,
+    // en commençant par les piocher dans le Compatiment 5.
+    // Il mélage ces cartes du compartiment 5 de manière aléàtoires.
+    // S'il n'y en pas 20 (par défaut) ou LIMIT (paramètre de la requetes),
+    // L'opération se répète mais pour le compartiment numéro 4.
+    // Ainsi de suite jusqu'à atteindre la limite de cartes demandées.
     find: async function(req,res){
-
-        //On récupère toutes les cartes appartenant à l'utilisateur
-        var myCartes = await Cartes.find({numUtilisateurs : req.me.id});
 
         //Si l'utilisateur a mis une limite de Cartes à récupérer, on affecte ce nombre.
         if(req.param('limit')){
-            var nombreDeCartes = req.param('limit');
+            var nombreDeCartesVoulues = req.param('limit');
         }
         else{
-            var nombreDeCartes = 20;
+            var nombreDeCartesVoulues = 20;
         }
 
-        //Utilise lodash (_) pour les trier aléatoirement. Le deuxième paramètre est le nombre qu'on veut en prendre aléatoirement.
-        var myCartesAleatoires = _.sample(myCartes,nombreDeCartes);
+        var myCartes = [];
+        for(var i=5 ; myCartes.length  < nombreDeCartesVoulues && i >= 1 ; i--)
+        {
+            //On récupère toutes les cartes appartenant à l'utilisateur
+            temp = await Cartes
+            .find({numUtilisateurs : req.me.id, compartiment : i})
+            .populate('numMotsRecto')
+            .populate('numMotsVerso');
 
-        //Renvoie le nombre de cartes demandé
-        return res.json(myCartesAleatoires);
+
+            //Utilise lodash (_) pour les trier aléatoirement. Le deuxième paramètre est le nombre qu'on veut en prendre aléatoirement.
+            temp = _.sample(temp,(nombreDeCartesVoulues - myCartes.length));
+
+            //On concatène pour n'en faire qu'un grand tableau, qui sera rempli la prochaine fois qu'on rentre dans la boucle si jamais il n'y a pas encore aasez de valeurs.
+            myCartes = myCartes.concat(temp);
+        }
+
+        //Renvoie le nombre de cartes demandée, triées aléatoirement
+        return res.json(myCartes);
     },
 
 

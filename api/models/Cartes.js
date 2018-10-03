@@ -7,50 +7,55 @@
 module.exports = {
     tableName:  'cartes',
     attributes: {
-  
-      //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
-      //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
-      //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-  
-      numMotsRecto: {
-        model : 'mots',
-        required: true,
-      },
 
-      numMotsVerso: {
-        model : 'mots',
-        required: true,
-      },
+		//  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
+		//  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
+		//  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-      numUtilisateurs: {
-          model: 'utilisateurs',
-          required: true,
-      },
+		compartiment: {
+		type: 'number',
+		min: 1,
+		max: 5,
+		defaultsTo: 3,
+		},
 
-      compartiment: {
-        type: 'number',
-        min: 1,
-        max: 5,
-        defaultsTo: 3,
-      },
+		nbFois: {
+		type: 'number',
+		defaultsTo: 0,
+		},
 
-      nbFois: {
-        type: 'number',
-        defaultsTo: 0,
-      },
+		//  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
+		//  ║╣ ║║║╠╩╗║╣  ║║╚═╗
+		//  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
+		// n/a
+		
+
+		//  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
+		//  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
+		//  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+		// n/a
+		numUtilisateurs: {
+			model: 'utilisateurs',
+			required: true,
+		},
+
+		numMotsRecto: {
+			model : 'mots',
+			required: true,
+		},
+
+		numMotsVerso: {
+			model : 'mots',
+			required: true,
+		},
+
   
-      //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
-      //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
-      //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-      // n/a
-      
-  
-      //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-      //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
-      //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-      // n/a
-  
-    },
+	},
+	
+	customToJSON: function() {
+		// Return a shallow copy of this record with the password removed.
+		return _.omit(this, ['numUtilisateurs'])
+	},
   
   
   };
