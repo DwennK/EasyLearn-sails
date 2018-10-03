@@ -15,7 +15,6 @@ module.exports = {
     },
 
     create: async function(req,res){
-        
         var createdUser = await Cartes.create(
             {
                 nom: req.param('nom'),
