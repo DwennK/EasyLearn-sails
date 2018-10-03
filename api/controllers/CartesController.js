@@ -9,10 +9,6 @@ module.exports = {
 
     //Returns only the words that the user owns.
     find: async function(req,res){
-        //var myCartes = await Cartes.find({numUtilisateurs : req.me.id})
-        //.limit(req.param('limit'));
-        //return res.json(myCartes);
-
 
         //On récupère toutes les cartes appartenant à l'utilisateur
         var myCartes = await Cartes.find({numUtilisateurs : req.me.id});
@@ -27,6 +23,8 @@ module.exports = {
 
         //Utilise lodash (_) pour les trier aléatoirement. Le deuxième paramètre est le nombre qu'on veut en prendre aléatoirement.
         var myCartesAleatoires = _.sample(myCartes,nombreDeCartes);
+
+        //Renvoie le nombre de cartes demandé
         return res.json(myCartesAleatoires);
     },
 
