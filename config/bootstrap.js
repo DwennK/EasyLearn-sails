@@ -66,7 +66,7 @@ module.exports.bootstrap = async function(done) {
   //CREATION DE DONNEES DE TEST A LA MAIN
   // By convention, this is a good place to set up fake data during development.
           await Utilisateurs.createEach([
-            { email: 'Dwenn@live.fr',   nom: 'Dwenn',   prenom: 'Kaufmann',    motDePasse: await sails.helpers.passwords.hashPassword('Dwenn') },
+            { email: 'Dwenn@live.fr',   nom: 'Dwenn',   prenom: 'Kaufmann',   motDePasse: await sails.helpers.passwords.hashPassword('Dwenn') , id : 1},
             { email: 'Mehmet@live.fr',  nom: 'Mehmet',  prenom: 'Ongan',      motDePasse: await sails.helpers.passwords.hashPassword('Mehmet') },
             { email: 'Maxence@live.fr', nom: 'Maxence', prenom: 'Bender',     motDePasse: await sails.helpers.passwords.hashPassword('Maxence') },
             { email: 'Dilane@live.fr',  nom: 'Dilane',  prenom: 'Rodriguez',  motDePasse: await sails.helpers.passwords.hashPassword('Dilane') },

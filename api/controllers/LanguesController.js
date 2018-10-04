@@ -9,7 +9,7 @@ module.exports = {
 
     
     find: async function(req,res){
-        var myLangues = await Langues.find({id : req.me.id});
+        var myLangues = await Langues.find();
         
         return res.json(myLangues);
     }
