@@ -29,7 +29,7 @@ module.exports = {
         {
             //On récupère toutes les cartes appartenant à l'utilisateur
             temp = await Cartes
-            .find({numUtilisateurs : req.me.id, compartiment : i})
+            .find({numUtilisateurs : req.me.id, compartiment : i, numCategories : req.param('numCategories')})
             .populate('numMotsRecto')
             .populate('numMotsVerso')
             .populate('numCategories')
