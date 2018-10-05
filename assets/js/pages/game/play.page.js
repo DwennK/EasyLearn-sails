@@ -27,7 +27,6 @@ parasails.registerPage('play', {
 
   
     clickThing: function(){
-      console.log(things);
       console.log('clicked thing #');
     }
 

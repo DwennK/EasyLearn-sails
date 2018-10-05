@@ -64,7 +64,10 @@ module.exports.routes = {
 
   'GET /langues/find' :             'LanguesController.find',
 
-  'GET /cartes/find' :              'CartesController.find',
+  'GET /api/v1/cartes/find':        { action: 'cartes/find' },
+  'GET /cartes/find':           	{ action: 'cartes/find' },
+
+  //'GET /cartes/find' :              { action: 'cartes/CartesController.find' },
   'GET /cartes/create' :            'CartesController.create',
 
   'GET /mots/find' :  	            'MotsController.find',

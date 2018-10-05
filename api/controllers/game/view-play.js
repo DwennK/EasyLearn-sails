@@ -18,21 +18,35 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    var things = [
-      { id:0 , label: 'Ceci est le label '},
-      { id:1 , label: 'Ceci est le label1'},
-      { id:2 , label: 'Ceci est le label2'},
-      { id:3 , label: 'Ceci est le label3'},
-    ];
+	//XXXXXXXXXXXXX
+				var nombreDeCartesVoulues = 20;
 
-    var userxs = await Utilisateurs.find();
+				var myCartes = [];
+				for(var i=5 ; myCartes.length  < nombreDeCartesVoulues && i >= 1 ; i--)
+				{
+					//On récupère toutes les cartes appartenant à l'utilisateur
+					temp = await Cartes
+					.find({numUtilisateurs : this.req.me.id, compartiment : i})
+					.populate('numMotsRecto')
+					.populate('numMotsVerso');
+
+
+					//Utilise lodash (_) pour les trier aléatoirement. Le deuxième paramètre est le nombre qu'on veut en prendre aléatoirement.
+					temp = _.sample(temp,(nombreDeCartesVoulues - myCartes.length));
+
+					//On concatène pour n'en faire qu'un grand tableau, qui sera rempli la prochaine fois qu'on rentre dans la boucle si jamais il n'y a pas encore aasez de valeurs.
+					myCartes = myCartes.concat(temp);
+				}
+
+				//Renvoie le nombre de cartes demandée, triées aléatoirement
+				//return res.json(myCartes);
+    //XXXXXX
 
     // Respond with view.
     return exits.success(
       {
             //On y retourne les tableaux
-            things,
-            userxs
+			myCartes
       }
     );
 
