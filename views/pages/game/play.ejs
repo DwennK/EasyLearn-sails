@@ -6,6 +6,10 @@
             <div v-for="myCarte in myCartes" :value="myCarte.id">
 				<br>
 				Carte Numéro : {{myCarte.id}}
+				<br>
+				Catégorie : {{myCarte.numCategories.libelle}}
+				<br>
+				Compartiment : {{myCarte.compartiment}}
 				<code>
 						<p> 
                 {{myCarte.numMotsRecto.numLangues.libelle}}		:	{{myCarte.numMotsRecto.libelle}}

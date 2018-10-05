@@ -30,6 +30,7 @@ module.exports = {
 					.find({numUtilisateurs : this.req.me.id, compartiment : i})
 					.populate('numMotsRecto')
 					.populate('numMotsVerso')
+					.populate('numCategories')
 					.then(function(Langues){
 						return nestedPop(Langues,{
 							numMotsRecto:{

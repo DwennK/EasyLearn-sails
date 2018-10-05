@@ -39,6 +39,11 @@ module.exports = {
 			required: true,
 		},
 
+		numCategories: {
+			model: 'categories',
+			required: true,
+		},
+
 		numMotsRecto: {
 			model : 'mots',
 			required: true,

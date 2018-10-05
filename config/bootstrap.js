@@ -165,47 +165,47 @@ module.exports.bootstrap = async function(done) {
 
           await Cartes.createEach([
             //Cération des Cartes à la main pour l'utilisateur 1 (Dwenn@live.fr)
-    		    { numMotsRecto: 1,  numMotsVerso: 2,	numUtilisateurs : 1},
-			      { numMotsRecto: 1,  numMotsVerso: 3,  	numUtilisateurs : 1},
+    		    { numMotsRecto: 1,  numMotsVerso: 2,	numUtilisateurs : 1, numCategories : 2},
+			      { numMotsRecto: 1,  numMotsVerso: 3,  	numUtilisateurs : 1 ,numCategories : 2},
 
-            { numMotsRecto: 4,  numMotsVerso: 5,	numUtilisateurs : 1},
-            { numMotsRecto: 4,  numMotsVerso: 6,	numUtilisateurs : 1},
+            { numMotsRecto: 4,  numMotsVerso: 5,	numUtilisateurs : 1,numCategories : 2},
+            { numMotsRecto: 4,  numMotsVerso: 6,	numUtilisateurs : 1,numCategories : 2},
 
-            { numMotsRecto: 7,  numMotsVerso: 8,	numUtilisateurs : 1},
-            { numMotsRecto: 7,  numMotsVerso: 9,	numUtilisateurs : 1},
+            { numMotsRecto: 7,  numMotsVerso: 8,	numUtilisateurs : 1,numCategories : 2},
+            { numMotsRecto: 7,  numMotsVerso: 9,	numUtilisateurs : 1,numCategories : 2},
 
-            { numMotsRecto: 10,  numMotsVerso: 11,	numUtilisateurs : 1},
-            { numMotsRecto: 10,  numMotsVerso: 12,  numUtilisateurs : 1},
+            { numMotsRecto: 10,  numMotsVerso: 11,	numUtilisateurs : 1,numCategories : 2},
+            { numMotsRecto: 10,  numMotsVerso: 12,  numUtilisateurs : 1,numCategories : 2},
 
-            { numMotsRecto: 13,  numMotsVerso: 14,  numUtilisateurs : 1},
-            { numMotsRecto: 13,  numMotsVerso: 15,  numUtilisateurs : 1},
+            { numMotsRecto: 13,  numMotsVerso: 14,  numUtilisateurs : 1,numCategories : 2},
+            { numMotsRecto: 13,  numMotsVerso: 15,  numUtilisateurs : 1,numCategories : 2},
 
-            { numMotsRecto: 16,  numMotsVerso: 17,  numUtilisateurs : 1},
-            { numMotsRecto: 16,  numMotsVerso: 18,  numUtilisateurs : 1},
+            { numMotsRecto: 16,  numMotsVerso: 17,  numUtilisateurs : 1,numCategories : 2},
+            { numMotsRecto: 16,  numMotsVerso: 18,  numUtilisateurs : 1,numCategories : 2},
 
-            { numMotsRecto: 19,  numMotsVerso: 20,  numUtilisateurs : 1},
-            { numMotsRecto: 19,  numMotsVerso: 21,  numUtilisateurs : 1},
+            { numMotsRecto: 19,  numMotsVerso: 20,  numUtilisateurs : 1,numCategories : 2},
+            { numMotsRecto: 19,  numMotsVerso: 21,  numUtilisateurs : 1,numCategories : 2},
 
-            { numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1},
-            { numMotsRecto: 22,  numMotsVerso: 24,  numUtilisateurs : 1},
+            { numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1,numCategories : 2},
+            { numMotsRecto: 22,  numMotsVerso: 24,  numUtilisateurs : 1,numCategories : 2},
 
             //Cartes compartiment 4
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
-			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
+			{ numMotsRecto: 22,  numMotsVerso: 23,  numUtilisateurs : 1, compartiment: 1,numCategories : 2},
             
 		  ]);
 		  

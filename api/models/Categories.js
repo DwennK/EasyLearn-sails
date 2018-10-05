@@ -30,6 +30,10 @@ module.exports = {
       //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
       //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
       // n/a
+      numCartes: {
+        collection: 'cartes',
+        via: 'numCategories'
+      }
   
     },
   
