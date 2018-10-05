@@ -65,6 +65,20 @@ module.exports.bootstrap = async function(done) {
   //CREATION DE DONNEES DE TEST A LA MAIN
   //CREATION DE DONNEES DE TEST A LA MAIN
   // By convention, this is a good place to set up fake data during development.
+          //DROP ALL DATABASES EN MODE BAGARRE
+         // await Utilisateurs.drop(function(err) { /** **/ });
+         // await Langues.drop(function(err) { /** **/ });
+         //await Categories.drop(function(err) { /** **/ });
+         // await Mots.drop(function(err) { /** **/ });
+          //await Cartes.drop(function(err) { /** **/ });
+
+          // Send it to the database.
+          var rawResult = await sails.sendNativeQuery('ALTER TABLE Utilisateurs AUTO_INCREMENT = 1');
+          var rawResult = await sails.sendNativeQuery('ALTER TABLE Langues AUTO_INCREMENT = 1');
+          var rawResult = await sails.sendNativeQuery('ALTER TABLE Categories AUTO_INCREMENT = 1');
+          var rawResult = await sails.sendNativeQuery('ALTER TABLE Mots AUTO_INCREMENT = 1');
+          var rawResult = await sails.sendNativeQuery('ALTER TABLE Cartes AUTO_INCREMENT = 1');
+
           await Utilisateurs.createEach([
             { email: 'Dwenn@live.fr',   nom: 'Dwenn',   prenom: 'Kaufmann',   motDePasse: await sails.helpers.passwords.hashPassword('Dwenn') , id : 1},
             { email: 'Mehmet@live.fr',  nom: 'Mehmet',  prenom: 'Ongan',      motDePasse: await sails.helpers.passwords.hashPassword('Mehmet') },
