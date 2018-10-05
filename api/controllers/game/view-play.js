@@ -20,6 +20,7 @@ module.exports = {
 
 	//XXXXXXXXXXXXX
 				var nombreDeCartesVoulues = 20;
+				var nestedPop = require('nested-pop');
 
 				var myCartes = [];
 				for(var i=5 ; myCartes.length  < nombreDeCartesVoulues && i >= 1 ; i--)
@@ -28,7 +29,32 @@ module.exports = {
 					temp = await Cartes
 					.find({numUtilisateurs : this.req.me.id, compartiment : i})
 					.populate('numMotsRecto')
-					.populate('numMotsVerso');
+					.populate('numMotsVerso')
+					.then(function(Langues){
+						return nestedPop(Langues,{
+							numMotsRecto:{
+								as: 'Mots',
+								populate: [
+									'numLangues'
+								]
+							}
+						}
+						)
+					})
+					.then(function(Languesx){
+						return nestedPop(Languesx,{
+							numMotsVerso:{
+								as: 'Mots',
+								populate: [
+									'numLangues'
+								]
+							}
+						}
+						)
+					})
+					.catch(function(err) {
+						return err;
+					});
 
 
 					//Utilise lodash (_) pour les trier aléatoirement. Le deuxième paramètre est le nombre qu'on veut en prendre aléatoirement.
@@ -40,13 +66,12 @@ module.exports = {
 
 				//Renvoie le nombre de cartes demandée, triées aléatoirement
 				//return res.json(myCartes);
-    //XXXXXX
 
     // Respond with view.
     return exits.success(
       {
             //On y retourne les tableaux
-			myCartes
+						myCartes
       }
     );
 

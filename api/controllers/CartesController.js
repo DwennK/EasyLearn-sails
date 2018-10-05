@@ -61,5 +61,27 @@ module.exports = {
         return res.json(createdCard);
     },
 
+
+
+    update: async function(req,res){
+
+        //Si l'utilisateur ne modifie pas sa propre carte
+        if(this.req.me.id != req.param('id'))
+        {
+            return res.unauthorized();
+        }
+
+        //Si c'est bien sa carte à lui
+        var createdCard = await Cartes
+            .update({id: req.param('id')})
+            .set({
+                numMotsVerso : req.param('numMotsVerso'),
+                numMotsVerso : req.param('numMotsVerso'),
+            })
+            .fetch();
+
+        return res.json(createdCard);
+    },
+
 };
 

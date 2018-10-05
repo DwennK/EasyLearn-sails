@@ -96,18 +96,18 @@ module.exports.bootstrap = async function(done) {
             //Stylo
             { libelle: 'Stylo',    numLangues : 1, numUtilisateurs : 1},
             { libelle: 'Pencil',   numLangues : 2, numUtilisateurs : 1},
-            { libelle: 'Penna',    numLangues : 4, numUtilisateurs : 1},
+            { libelle: 'Penna',    numLangues : 3, numUtilisateurs : 1},
             
             //Régle
             { libelle: 'Règle',    numLangues : 1, numUtilisateurs : 1},
             { libelle: 'Ruler',    numLangues : 2, numUtilisateurs : 1},
-            { libelle: 'Regola',   numLangues : 4, numUtilisateurs : 1},
+            { libelle: 'Regola',   numLangues : 3, numUtilisateurs : 1},
             
 
             //Sac à dos
             { libelle: 'Sac à dos',  numLangues : 1, numUtilisateurs : 1},
             { libelle: 'Backpack',   numLangues : 2, numUtilisateurs : 1},
-            { libelle: 'Zaino',      numLangues : 4, numUtilisateurs : 1},
+            { libelle: 'Zaino',      numLangues : 3, numUtilisateurs : 1},
             
 
             //Livre
@@ -165,8 +165,8 @@ module.exports.bootstrap = async function(done) {
 
           await Cartes.createEach([
             //Cération des Cartes à la main pour l'utilisateur 1 (Dwenn@live.fr)
-    		{ numMotsRecto: 1,  numMotsVerso: 2,	numUtilisateurs : 1},
-			{ numMotsRecto: 1,  numMotsVerso: 3,  	numUtilisateurs : 1},
+    		    { numMotsRecto: 1,  numMotsVerso: 2,	numUtilisateurs : 1},
+			      { numMotsRecto: 1,  numMotsVerso: 3,  	numUtilisateurs : 1},
 
             { numMotsRecto: 4,  numMotsVerso: 5,	numUtilisateurs : 1},
             { numMotsRecto: 4,  numMotsVerso: 6,	numUtilisateurs : 1},
