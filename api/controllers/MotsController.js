@@ -9,7 +9,12 @@ module.exports = {
 
     //Returns only the words that the user
     find: async function(req,res){
-        var myMots = await Mots.find({numUtilisateurs : req.me.id});
+
+        var nestedPop = require('nested-pop');
+
+
+        var myMots = await Mots.find({numUtilisateurs : req.me.id})
+            .populate('numLangues');
         
         return res.json(myMots);
     }

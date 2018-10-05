@@ -15,6 +15,7 @@ module.exports = {
     // Ainsi de suite jusqu'à atteindre la limite de cartes demandées.
     find: async function(req,res){
 
+        var nestedPop = require('nested-pop');
         //Si l'utilisateur a mis une limite de Cartes à récupérer, on affecte ce nombre.
         if(req.param('limit')){
             var nombreDeCartesVoulues = req.param('limit');
@@ -30,7 +31,19 @@ module.exports = {
             temp = await Cartes
             .find({numUtilisateurs : req.me.id, compartiment : i})
             .populate('numMotsRecto')
-            .populate('numMotsVerso');
+            .populate('numMotsVerso')
+            .populate('numCategories')
+            .then(function(Langues){
+                return nestedPop(Langues,{
+                    numMotsRecto:{
+                        as: 'Mots',
+                        populate: [
+                            'numLangues'
+                        ]
+                    }
+                }
+                )
+            })
 
 
             //Utilise lodash (_) pour les trier aléatoirement. Le deuxième paramètre est le nombre qu'on veut en prendre aléatoirement.
