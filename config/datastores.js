@@ -50,12 +50,12 @@ module.exports.datastores = {
     ***************************************************************************/
      adapter: 'sails-mysql',
      //adapter: 'sails-postgresql',
-     url: 'mysql://root:@localhost:3306/easylearn',
+     //url: 'mysql://root:@localhost:3306/easylearn',
      // STRING DE CONNEXION DE LA BDD REELLE EN DESSOUS<!>
      //url: 'mysql://b543ed971e5e69:6081357c@eu-cdbr-west-02.cleardb.net/heroku_06a715057283883?reconnect=true',
      //url: 'mysql://c2s9luras0adaoap:ycbxyiatj96salqr@gi6kn64hu98hy0b6.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/ide50omkpl3pimbv',
-     //url : 'mysql://rynp99m5w0npjksl:u4xar8j3fzlir3hx@gi6kn64hu98hy0b6.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/wtrb3qrg4z3s2awz',
-    // url : 'postgres://kaufmanndw:Idclip1234@S2LPostgres1.s2.rpn.ch:5432/canada'
+     url : 'mysql://rynp99m5w0npjksl:u4xar8j3fzlir3hx@gi6kn64hu98hy0b6.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/wtrb3qrg4z3s2awz',
+    //url : 'postgres://kaufmanndw:Idclip1234@S2LPostgres1.s2.rpn.ch:5432/canada'
 
   },
 
