@@ -1,32 +1,35 @@
 <div id="play">
-    <div class="container">
-      <h1>Easylearn : Play</h1>
-      <hr/>
-      <p>Here is a list of your cards :</p>
-            <div v-for="myCarte in myCartes" :value="myCarte.id">
-				<br>
-				Carte Numéro : {{myCarte.id}}
-				<br>
-				Catégorie : {{myCarte.numCategories.libelle}}
-				<br>
-				Compartiment : {{myCarte.compartiment}}
+	<div class="container">
+		<h1>Easylearn : Play</h1>
+		<hr />
+		<p>Here is a list of your cards :</p>
+		<div class="card" v-for="myCarte in myCartes" :value="myCarte.id">
+			<img src="img_avatar.png" alt="Avatar" style="width:100%">
+			<div class="card-info">
+				<span>Carte Numéro : {{myCarte.id}}</span> <br>
+				<span>Catégorie : {{myCarte.numCategories.libelle}}</span> <br>
+				<span>Compartiment : {{myCarte.compartiment}}</span> <br>
+			</div>
+			<div class="card-words">
 				<code>
-						<p> 
-                {{myCarte.numMotsRecto.numLangues.libelle}}		:	{{myCarte.numMotsRecto.libelle}}
-                <br>
-                {{myCarte.numMotsVerso.numLangues.libelle}}		:	{{myCarte.numMotsVerso.libelle}}
-            </p>
+					<p> 
+						{{myCarte.numMotsRecto.numLangues.libelle}}		:	{{myCarte.numMotsRecto.libelle}}
+						<br>
+						{{myCarte.numMotsVerso.numLangues.libelle}}		:	{{myCarte.numMotsVerso.libelle}}
+					</p>
 				</code>
 
-				<br>
-            </div>
+			</div>
 
-      <div class="buttons">
-        <a class="btn btn-info">Click me </a>
-        <button class="btn btn-outline-info ml-2">Open a modal</button>
-      </div>
-    </div>
-  
-  </div>
-  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
-  
+
+			<br>
+		</div>
+
+		<div class="buttons">
+			<a class="btn btn-info">Click me </a>
+			<button class="btn btn-outline-info ml-2">Open a modal</button>
+		</div>
+	</div>
+
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
