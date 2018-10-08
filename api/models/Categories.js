@@ -33,7 +33,12 @@ module.exports = {
       numCartes: {
         collection: 'cartes',
         via: 'numCategories'
-      }
+      },
+
+      numUtilisateurs: {
+        model : 'utilisateurs',
+        required: true,
+      },
   
     },
   

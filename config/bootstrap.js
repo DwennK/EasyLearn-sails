@@ -94,10 +94,10 @@ module.exports.bootstrap = async function(done) {
           ]);
 
           await Categories.createEach([
-            { libelle: 'Food' },
-            { libelle: 'School' },
-            { libelle: 'Computer' },
-            { libelle: 'Pokémon' },
+            { libelle: 'Food' ,numUtilisateurs : 1},
+            { libelle: 'School' ,numUtilisateurs : 1},
+            { libelle: 'Computer' ,numUtilisateurs : 1},
+            { libelle: 'Pokémon' ,numUtilisateurs : 1},
           ]);
 
           await Mots.createEach([

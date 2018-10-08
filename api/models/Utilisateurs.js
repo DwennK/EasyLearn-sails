@@ -49,6 +49,11 @@ module.exports = {
     cartes: {
       collection: 'cartes',
       via: 'numUtilisateurs'
+    },
+
+    categories: {
+      collection: 'categories',
+      via: 'numUtilisateurs'
     }
 
 
