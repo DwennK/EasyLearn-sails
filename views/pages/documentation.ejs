@@ -110,27 +110,36 @@
 				<img alt="computer with sails logo on screen" src="/images/setup-customize.png"/>
 				</div>
 				<div class="px-0 pt-1 pb-3 comment-body js-comment-body js-preview-body" style="min-height: 390px;"><div class="markdown-body">
-			  <h1>
-			<a id="user-content-postman" class="anchor" href="#postman" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Postman</h1>
-			<p>You can use <a href="https://www.getpostman.com/" rel="nofollow">Postman</a> to easily make resquest to this API.</p>
-			<p>You can also make requests directly from your web browser if you want, and you'll get the results as JSON.
-			When <em>creating/updating/deleting</em> new datas, you'll receive the data <em>created/updated/deleted</em> as a response.</p>
-			<h2>
-			<a id="user-content-get-available-lessons-only-once-the-user-is-connected" class="anchor" href="#get-available-lessons-only-once-the-user-is-connected" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get available lessons (only once the user is connected)</h2>
-			<p><code>GET /categories/find</code></p>
-			<p>You will receive all the categories.</p>
-			<h2>
-			<a id="user-content-get-cards-from-a-lesson" class="anchor" href="#get-cards-from-a-lesson" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get cards from a lesson</h2>
-			<p><code>GET /cartes/find?limit=XX</code></p>
-			<p>Where <code>XX</code> is the number of cards you want to get, provided there is enough already created.
-			If you do not specify the number of cards you want, the default number is 20.</p>
-			<p>A user can only find his own cards.</p>
-			<h2>
-			<a id="user-content-modify-cards-compartiment-from-a-specific-lesson" class="anchor" href="#modify-cards-compartiment-from-a-specific-lesson" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modify cards compartiment from a specific lesson</h2>
-			<p><code>GET /cartes/update/?id=XX&amp;numMotsRecto=XX&amp;numMotsVerso=XX</code></p>
-			<p>Where <code>XX</code> is the number of cards you want to get, provided there is enough already created.
-			If you do not specify the number of cards you want, the default number is 20.</p>
-			<p>A user can only update his own cards.</p>
+          <div class="stackedit__html"><h2 id="postman">Postman</h2>
+            <p>You can use <a href="https://www.getpostman.com/">Postman</a> to easily make resquest to this API.</p>
+            <p>You can also make requests directly from your web browser if you want, and you’ll get the results as JSON.<br>
+            When <em>creating/updating/deleting</em> new datas, you’ll receive the data <em>created/updated/deleted</em> as a response.</p>
+            <h2 id="connect-to-the-api-and-get-a-token">Connect to the API and get a token</h2>
+            <p>To connect, you have to send a PUT resquest to the login API endpoint</p>
+            <p><code>PUT /api/v1/entrance/login</code></p>
+            <p>in header, you have to send these values:<br>
+            emailAddress : YOUREMAIL<br>
+            password : YOURPASSWORD<br>
+            You will receive the TOKEN, by the response header.</p>
+            <p>Here is a picture to show you how : <img src="http://image.noelshack.com/fichiers/2018/40/5/1538734898-screenshot-1.png" alt="Postman Connect"></p>
+            <h2 id="get-available-lessons-only-once-the-user-is-connected">Get available lessons (only once the user is connected)</h2>
+            <p><code>GET /categories/find</code></p>
+            <p>You will receive all the categories.</p>
+            <h2 id="get-cards-from-a-lesson">Get cards from a lesson</h2>
+            <p><code>GET /cartes/find?limit=XX?numCategories=YY</code></p>
+            <p>Where <code>XX</code> is the number of cards you want to get, provided there is enough already created.<br>
+            If you do not specify the number of cards you want, the default number is 20.</p>
+            <p>Where <code>YY</code> is the identifier of the category model’s card you want to get…</p>
+            <p>A user can only find his own cards.</p>
+            <hr>
+            <h2 id="get-all-the-words-of-the-current-user.">Get all the words of the current user.</h2>
+            <p><code>GET /mots/find</code></p>
+            <h2 id="modify-cards-compartiment-from-a-specific-lesson">Modify cards compartiment from a specific lesson</h2>
+            <p><code>GET /cartes/update/?numMotsRecto=XX&amp;numMotsVerso=XX</code></p>
+            <p>Where <code>XX</code> is the number of cards you want to get, provided there is enough already created.<br>
+            If you do not specify the number of cards you want, the default number is 20.</p>
+            <p>A user can only update his own cards.</p>
+            </div>
 			</div>
 			</div>
 			  </div>
