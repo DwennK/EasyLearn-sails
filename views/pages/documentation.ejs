@@ -110,45 +110,45 @@
 				<img alt="computer with sails logo on screen" src="/images/setup-customize.png"/>
 				</div>
         <div class="markdown-body">
-          <h2>
-<a id="user-content-postman" class="anchor" href="#postman" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Postman</h2>
-<p>You can use <a href="https://www.getpostman.com/" rel="nofollow">Postman</a> to easily make resquest to this API.</p>
-<p>You can also make requests directly from your web browser if you want, and you'll get the results as JSON.
-When <em>creating/updating/deleting</em> new datas, you'll receive the data <em>created/updated/deleted</em> as a response.</p>
-<h2>
-<a id="user-content-credentials" class="anchor" href="#credentials" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Credentials</h2>
-<p>Here is a test account that have ~25 cards in the category 2. (School)</p>
-<p><code>E-mail : Dwenn@live.fr</code></p>
-<p><code>Password : Dwenn</code></p>
-<h2>
-<a id="user-content-connect-to-the-api-and-get-a-token" class="anchor" href="#connect-to-the-api-and-get-a-token" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connect to the API and get a token</h2>
-<p>To connect, you have to send a PUT resquest to the login API endpoint</p>
-<p><code>PUT /api/v1/entrance/login</code></p>
-<p>in header, you have to send these values:</p>
-<p><code>emailAddress : YOUREMAIL</code></p>
-<p><code>password : YOURPASSWORD</code></p>
-<p>You will receive the TOKEN, by the response header.</p>
-<p>Here is a picture to show you how : <img src="https://camo.githubusercontent.com/8f49ba7f3fa7dd7866d7047ec8dc2d64978d17c1/687474703a2f2f696d6167652e6e6f656c736861636b2e636f6d2f66696368696572732f323031382f34302f352f313533383733343839382d73637265656e73686f742d312e706e67" alt="Postman Connect" data-canonical-src="http://image.noelshack.com/fichiers/2018/40/5/1538734898-screenshot-1.png"></p>
-<h2>
-<a id="user-content-get-available-lessons-only-once-the-user-is-connected" class="anchor" href="#get-available-lessons-only-once-the-user-is-connected" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get available lessons (only once the user is connected)</h2>
-<p><code>GET /categories/find</code></p>
-<p>You will receive all the categories.</p>
-<h2>
-<a id="user-content-get-cards-from-a-lesson" class="anchor" href="#get-cards-from-a-lesson" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get cards from a lesson</h2>
-<p><code>GET /cartes/find?limit=XX?numCategories=YY</code></p>
-<p>Where <code>XX</code> is the number of cards you want to get, provided there is enough already created.
-If you do not specify the number of cards you want, the default number is 20.</p>
-<p>Where <code>YY</code> is the identifier of the category model's card you want to get.</p>
-<p>A user can only find his own cards.</p>
-<h2>
-<a id="user-content-get-all-the-words-of-the-current-user" class="anchor" href="#get-all-the-words-of-the-current-user" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get all the words of the current user.</h2>
-<p><code>GET /mots/find</code></p>
-<h2>
-<a id="user-content-modify-cards-compartiment-from-a-specific-lesson" class="anchor" href="#modify-cards-compartiment-from-a-specific-lesson" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modify cards compartiment from a specific lesson</h2>
-<p><code>GET /cartes/update/1/?numMotsRecto=XX&amp;numMotsVerso=YY&amp;compartiment=ZZ</code></p>
-<p>Where <code>XX</code>  and <code>YY</code> is the ID of the word you want to modify.</p>
-<p><code>ZZ</code> Is the Compartiment you want to move the card to.</p>
-<p>A user can only update his own cards.</p>
+                        <h2>
+              <a id="user-content-postman" class="anchor" href="#postman" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Postman</h2>
+              <p>You can use <a href="https://www.getpostman.com/" rel="nofollow">Postman</a> to easily make resquest to this API.</p>
+              <p>You can also make requests directly from your web browser if you want, and you'll get the results as JSON.
+              When <em>creating/updating/deleting</em> new datas, you'll receive the data <em>created/updated/deleted</em> as a response.</p>
+              <h2>
+              <a id="user-content-credentials" class="anchor" href="#credentials" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Credentials</h2>
+              <p>Here is a test account that have ~25 cards in the category 2. (School)</p>
+              <p><code>E-mail : Dwenn@live.fr</code></p>
+              <p><code>Password : Dwenn</code></p>
+              <h2>
+              <a id="user-content-connect-to-the-api-and-get-a-token" class="anchor" href="#connect-to-the-api-and-get-a-token" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connect to the API and get a token</h2>
+              <p>To connect, you have to send a PUT resquest to the login API endpoint</p>
+              <p><code>PUT /api/v1/entrance/login</code></p>
+              <p>in header, you have to send these values:</p>
+              <p><code>emailAddress : YOUREMAIL</code></p>
+              <p><code>password : YOURPASSWORD</code></p>
+              <p>You will receive the TOKEN, by the response header.</p>
+              <p>Here is a picture to show you how : <img src="https://camo.githubusercontent.com/8f49ba7f3fa7dd7866d7047ec8dc2d64978d17c1/687474703a2f2f696d6167652e6e6f656c736861636b2e636f6d2f66696368696572732f323031382f34302f352f313533383733343839382d73637265656e73686f742d312e706e67" alt="Postman Connect" data-canonical-src="http://image.noelshack.com/fichiers/2018/40/5/1538734898-screenshot-1.png"></p>
+              <h2>
+              <a id="user-content-get-available-lessons-only-once-the-user-is-connected" class="anchor" href="#get-available-lessons-only-once-the-user-is-connected" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get available lessons (only once the user is connected)</h2>
+              <p><code>GET /categories/find</code></p>
+              <p>You will receive all the categories.</p>
+              <h2>
+              <a id="user-content-get-cards-from-a-lesson" class="anchor" href="#get-cards-from-a-lesson" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get cards from a lesson</h2>
+              <p><code>GET /cartes/find?limit=XX?numCategories=YY</code></p>
+              <p>Where <code>XX</code> is the number of cards you want to get, provided there is enough already created.
+              If you do not specify the number of cards you want, the default number is 20.</p>
+              <p>Where <code>YY</code> is the identifier of the category model's card you want to get.</p>
+              <p>A user can only find his own cards.</p>
+              <h2>
+              <a id="user-content-get-all-the-words-of-the-current-user" class="anchor" href="#get-all-the-words-of-the-current-user" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get all the words of the current user.</h2>
+              <p><code>GET /mots/find</code></p>
+              <h2>
+              <a id="user-content-modify-cards-compartiment-from-a-specific-lesson" class="anchor" href="#modify-cards-compartiment-from-a-specific-lesson" aria-hidden="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modify cards compartiment from a specific lesson</h2>
+              <p><code>GET /cartes/update/1/?numMotsRecto=XX&amp;numMotsVerso=YY&amp;compartiment=ZZ</code></p>
+              <p>Where <code>XX</code>  and <code>YY</code> is the ID of the word you want to modify.</p>
+              <p><code>ZZ</code> Is the Compartiment you want to move the card to.</p>
+              <p>A user can only update his own cards.</p>
 
         </div>
 		</div>
