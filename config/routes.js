@@ -69,6 +69,7 @@ module.exports.routes = {
 
   //'GET /cartes/find' :              { action: 'cartes/CartesController.find' },
   'GET /cartes/create' :            'CartesController.create',
+  'GET /cartes/update' :            'CartesController.update',
 
   'GET /mots/find' :  	            'MotsController.find',
 

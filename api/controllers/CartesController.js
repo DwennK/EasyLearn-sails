@@ -90,6 +90,7 @@ module.exports = {
             .set({
                 numMotsVerso : req.param('numMotsVerso'),
                 numMotsVerso : req.param('numMotsVerso'),
+                compartiment : req.param('compartiment'),
             })
             .fetch();
 
