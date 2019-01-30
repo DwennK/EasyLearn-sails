@@ -95,8 +95,9 @@ module.exports = {
             return res.unauthorized();
         }
 
-        //Si c'est bien sa carte à lui
-        var createdCard = await Cartes
+        //Si c'est bien sa carte à lui, on la modifie.
+        //Les paramètres sont optionnels , on peut ne changer que le compartiment si on veut :))
+        var modifiedCartes = await Cartes
             .update({id: req.param('id')})
             .set({
                 numMotsVerso : req.param('numMotsVerso'),
@@ -105,7 +106,7 @@ module.exports = {
             })
             .fetch();
 
-        return res.json(createdCard);
+        return res.json(modifiedCartes);
     },
 
 };
