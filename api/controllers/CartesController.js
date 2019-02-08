@@ -44,6 +44,17 @@ module.exports = {
                 }
                 )
             })
+            .then(function(Langues){
+                return nestedPop(Langues,{
+                    numMotsVerso:{
+                        as: 'Mots',
+                        populate: [
+                            'numLangues'
+                        ]
+                    }
+                }
+                )
+            })
 
 
             //Utilise lodash (_) pour les trier aléatoirement. Le deuxième paramètre est le nombre qu'on veut en prendre aléatoirement.
@@ -96,7 +107,7 @@ module.exports = {
             })
             .fetch();
 
-        return res.json(createdCard);
+        return res.json(modifiedCartes);
     },
 
 };

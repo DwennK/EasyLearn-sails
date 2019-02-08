@@ -140,7 +140,7 @@ module.exports.bootstrap = async function(done) {
             { libelle: 'Professore',   numLangues : 3, numUtilisateurs : 1},
 
             //Classeur
-            { libelle: 'Classeur',   numLangues : 1, numUtilisateurs : 1},
+            { libelle: 'Classeur',    numLangues : 1, numUtilisateurs : 1},
             { libelle: 'Binder',  numLangues : 2, numUtilisateurs : 1},
             { libelle: 'Quaderno ad anelli',   numLangues : 3, numUtilisateurs : 1},
 
