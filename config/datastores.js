@@ -50,9 +50,9 @@ module.exports.datastores = {
     ***************************************************************************/
      adapter: 'sails-mysql',
      //adapter: 'sails-postgresql',
-     url: 'mysql://root:@localhost:3306/easylearn',
+     //url: 'mysql://root:@localhost:3306/easylearn',
      // STRING DE CONNEXION DE LA BDD REELLE EN DESSOUS<!>
-     //url : 'mysql://rynp99m5w0npjksl:u4xar8j3fzlir3hx@gi6kn64hu98hy0b6.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/wtrb3qrg4z3s2awz',
+     url : 'mysql://rynp99m5w0npjksl:u4xar8j3fzlir3hx@gi6kn64hu98hy0b6.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/wtrb3qrg4z3s2awz',
 
   },
 
