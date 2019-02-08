@@ -78,13 +78,15 @@ module.exports = {
 
     update: async function(req,res){
 
-        //Si l'utilisateur ne modifie pas sa propre carte
-        if(this.req.me.id != req.param('id'))
+        //Si l'utilisateur ne modifie pas sa propre carte, on lui renvoie un unauthorized.
+        var CarteAModifier = await Cartes.findOne({id: req.param('id')});
+        if(CarteAModifier.numUtilisateurs != req.me.id)
         {
             return res.unauthorized();
         }
 
-        //Si c'est bien sa carte à lui
+
+        //Si c'est bien sa carte à lui, on la modifie vraiment
         var createdCard = await Cartes
             .update({id: req.param('id')})
             .set({

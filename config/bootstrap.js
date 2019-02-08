@@ -182,8 +182,8 @@ module.exports.bootstrap = async function(done) {
     		    { numMotsRecto: 1,  numMotsVerso: 2,	numUtilisateurs : 1, numCategories : 2},
 			      { numMotsRecto: 1,  numMotsVerso: 3,  	numUtilisateurs : 1 ,numCategories : 2},
 
-            { numMotsRecto: 4,  numMotsVerso: 5,	numUtilisateurs : 1,numCategories : 2},
-            { numMotsRecto: 4,  numMotsVerso: 6,	numUtilisateurs : 1,numCategories : 2},
+            { numMotsRecto: 4,  numMotsVerso: 5,	numUtilisateurs : 1,numCategories : 2, compartiment : 5},
+            { numMotsRecto: 4,  numMotsVerso: 6,	numUtilisateurs : 1,numCategories : 2, compartiment : 5},
 
             { numMotsRecto: 7,  numMotsVerso: 8,	numUtilisateurs : 1,numCategories : 2},
             { numMotsRecto: 7,  numMotsVerso: 9,	numUtilisateurs : 1,numCategories : 2},
