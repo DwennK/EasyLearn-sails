@@ -98,7 +98,7 @@ module.exports = {
 
 
         //Si c'est bien sa carte à lui, on la modifie vraiment
-        var createdCard = await Cartes
+        var modifiedCartes = await Cartes
             .update({id: req.param('id')})
             .set({
                 numMotsVerso : req.param('numMotsVerso'),
